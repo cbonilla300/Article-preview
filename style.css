@@ -1,0 +1,87 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    /* width: 1444px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(210, 46%, 95%);
+}
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    height: 350px;
+    /* max-width: 50%; */
+    border: 2px solid;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px 5px hsl(212, 23%, 69%);
+    font-family: "Manrope", sans-serif;
+}
+#drawers {
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left  ;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: .5rem 2rem;
+}
+/* .right-side p:nth-of-type(1) {
+    font-size: 1.5rem;
+} */
+.avatar-links {
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+    margin-top: .5rem;
+}
+#share {
+    margin-left: auto;
+    border: 2px solid black;
+    color: white;
+    border-radius: 50%;
+    background-color: hsl(210 30% 90% / 1);
+    padding: .5rem;
+}
+#michelle {
+    width: 40px;
+    border-radius: 50%;
+}
+.right-side > p:nth-child(1) {
+    font-size: 1.35rem;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+.right-side > p:nth-child(2) {
+    /* color: hsl(212, 23%, 69%); */
+    /* color: hsl(214, 17%, 51%); */
+    color: hsl(217, 19%, 35%);
+    font-weight: 500;
+    font-size: .85rem;
+}
+.avatar-info p:nth-child(1) {
+    font-size: 14px;
+    font-weight: 600;
+    
+}
+.avatar-info p:nth-child(2) {
+    color: hsl(212, 23%, 69%);
+    font-weight: 500;
+}
+.attribution {
+    margin-top: 1.5rem;
+}
