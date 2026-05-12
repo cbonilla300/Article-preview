@@ -50,12 +50,13 @@ body {
     margin-top: .5rem;
 }
 #share {
-    margin-left: auto;
+    /* margin-left: auto; */
     border: 2px solid black;
     color: white;
     border-radius: 50%;
     background-color: hsl(210 30% 90% / 1);
     padding: .5rem;
+    position: relative;
 }
 #michelle {
     width: 40px;
@@ -84,4 +85,7 @@ body {
 }
 .attribution {
     margin-top: 1.5rem;
+}
+a {
+    margin-left: auto;
 }
