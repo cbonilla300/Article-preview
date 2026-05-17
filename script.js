@@ -1,24 +1,20 @@
 const share = document.querySelector("#share-button");
-const rightSidePositionParent = document.querySelector(".right-side")
+const shareContainer = document.querySelector(".share-container");
 share.addEventListener("click", (e) => {
     console.log(e.target.tagName)
-    const container = document.createElement("div");
-    container.className = "share-container"
-    const shareText = document.createElement("span");
-    shareText.textContent = "SHARE";
-    shareText.className = "share-text"
-    const facebook = document.createElement("img");
-    facebook.setAttribute("src","images/icon-facebook.svg");
-    const twitter = document.createElement("img");
-    twitter.setAttribute("src", "images/icon-twitter.svg");
-    const pinterest = document.createElement("img");
-    pinterest.setAttribute("src", "images/icon-pinterest.svg");
-    // document.body.appendChild(container);
-    container.appendChild(shareText);
-    container.appendChild(facebook);
-    container.appendChild(twitter);
-    container.appendChild(pinterest);
-    rightSidePositionParent.appendChild(container)
+    if(shareContainer.contains(document.querySelector("#share-button"))) {
+        share.remove()
+        document.querySelector('.avatar-links').appendChild(share);
+    }
+    if (e.target.tagName === "IMG") {
+        if (shareContainer.classList.contains("hidden")) {
+            shareContainer.classList.remove("hidden");
+            shareContainer.appendChild(share);
+
+        } else {
+            shareContainer.classList.add("hidden");
+        }
+    }
     console.log("test");
 })
 console.log("second console")

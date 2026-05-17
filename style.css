@@ -43,6 +43,7 @@ body {
 }
 .avatar-links {
     display: flex;
+    /* justify-content: space-around; */
     gap: 1rem;
     align-items: end;
     margin-top: .5rem;
@@ -84,13 +85,12 @@ h3 {
 .attribution {
     margin-top: 1.5rem;
 }
-a {
+/* a {
     margin-left: auto;
-}
+} */
 .share-container {
     position: absolute;
     right: -65px;
-    
     bottom: 90px;
     display: flex;
     width: 50%;
@@ -98,13 +98,14 @@ a {
     background-Color: hsl(217, 19%, 35%);
     /* padding : 1rem .1rem; */
     border-radius: 10px;
-    padding: 1rem 20px;
+    padding: 1rem .5rem 1rem .2rem;
    
 }
 .share-text {
     color: white;
     font-weight: 100;
     letter-spacing: 3px;
+    align-self: center;
 }
 .hidden {
     visibility: hidden;
@@ -119,6 +120,16 @@ a {
 @media (max-width: 769px) {
     body {
         margin: 0 4rem;
+    }
+    .share-container {
+        left: 50%;
+        
+    }
+    .avatar-links {
+        justify-content: space-between;
+    }
+    a {
+        margin-left: 0;
     }
 } 
 @media (max-width: 576px) {
@@ -142,10 +153,18 @@ a {
         border-top-right-radius: 10px;
     }
     .share-container {
+        display: flex;
         bottom: 0;
-        right: 0;
+        left: 0;
         width: 100%;
-        justify-content: space-around;
+        justify-content: space-between;
+    }
+    .share-text {
+        align-self: center;
+
+    }
+    a {
+        margin-left: 0;
     }
     .triangle {
         display: none;
